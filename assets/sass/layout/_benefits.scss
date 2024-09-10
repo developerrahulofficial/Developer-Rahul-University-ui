@@ -1,0 +1,40 @@
+// Benefits 
+.benefits{
+    position: relative;
+    background: url(../media/backgrounds/benefits-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include media-query(992px) {
+        background-position: left bottom;
+    }
+    .heading_block{
+        margin-bottom: 55px;
+    }
+    .card_block{
+        &:nth-child(2){
+            margin-top: -40px;
+        }
+        &:nth-child(3){
+            margin-top: -80px;
+        }
+        &:nth-child(4){
+            margin-top: -120px;
+        }
+        &:nth-child(5){
+            margin-top: -160px;
+        }
+        @include media-query(992px) {
+            &:nth-child(odd){
+                margin-top: 0;
+            }
+            &:nth-child(even){
+                margin-top: -40px;
+            }
+        }
+        @include media-query(575px) {
+            &:nth-child(even){
+                margin-top: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,175 @@
+// Discount banner
+.discount_banner {
+  background: url(../media/backgrounds/coming-soon-banner.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  @include media-query(992px) {
+    background-position: right;
+  }
+  .banner_text_block {
+    height: 600px;
+    display: grid;
+    align-content: center;
+    @include media-query(992px) {
+      height: auto;
+      padding: 70px 0 0;
+    }
+    .title_block {
+      position: relative;
+      .mic_speaker {
+        position: absolute;
+        right: 0;
+        top: -30px;
+      }
+      .title {
+        span {
+          position: relative;
+          .line_shape {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: calc(100% - 25px);
+            margin-left: 10px;
+            -webkit-animation: title-animation 5s linear 0s infinite;
+            animation: title-animation 5s linear 0s infinite;
+          }
+          .mic_speaker {
+            position: absolute;
+            right: -120px;
+            top: -78px;
+            -webkit-animation: animation-popup-1 1.2s linear 0s infinite alternate;
+            animation: animation-popup-1 1.2s linear 0s infinite alternate;
+          }
+        }
+      }
+    }
+  }
+  .discount_countdown {
+    position: relative;
+    height: 600px;
+    display: grid;
+    align-content: center;
+    overflow: hidden;
+    @include media-query(992px) {
+      height: 300px;
+    }
+    .dial {
+      background: url(..//media/shapes/exclude.png);
+      position: absolute;
+      right: 31px;
+      top: 0;
+      width: 512px;
+      height: 100%;
+      @include media-query(992px) {
+        display: none;
+      }
+      .top-remain {
+        display: flex;
+        padding-top: 32px;
+        justify-content: end;
+        gap: 64px;
+        flex-direction: column;
+        li {
+          list-style: none;
+          text-align: right;
+          color: $white;
+          font-size: 32px;
+          margin-bottom: 0;
+          &:nth-child(1) {
+            opacity: 0.3;
+            padding-right: 28%;
+            font-size: 24px;
+          }
+          &:nth-child(2) {
+            opacity: 0.6;
+            font-size: 28px;
+            padding-right: 17%;
+          }
+          &:nth-child(3) {
+            opacity: 0.8;
+            padding-right: 8%;
+          }
+        }
+      }
+      .top-coming {
+        display: flex;
+        padding-top: 122px;
+        justify-content: end;
+        gap: 64px;
+        flex-direction: column;
+        li {
+          list-style: none;
+          text-align: right;
+          color: $white;
+          font-size: 28px;
+          margin-bottom: 0;
+          &:nth-child(1) {
+            opacity: 0.8;
+            padding-right: 8%;
+          }
+          &:nth-child(2) {
+            opacity: 0.6;
+            font-size: 28px;
+            padding-right: 17%;
+          }
+          &:nth-child(3) {
+            opacity: 0.3;
+            padding-right: 28%;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .paint_shape {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      @include media-query(992px) {
+        width: 345px;
+        height: 255px;
+      }
+    }
+    .exclude {
+      position: absolute;
+      right: 45px;
+      top: 0;
+      animation: rotating 60s infinite linear;
+    }
+    .countdown {
+      position: relative;
+      z-index: 45;
+      justify-content: end;
+      align-content: center;
+      li {
+        &:last-child {
+          h2 {
+            position: relative;
+            z-index: 9;
+            span {
+              position: relative;
+              z-index: 999;
+              width: 80px;
+              text-align: center;
+              color: $white;
+              @include media-query(992px) {
+                width: auto;
+                color: $black;
+              }
+              padding: 0 0 0 23px;
+              @include media-query(1399px) {
+                padding-left: 14px;
+              }
+              @include media-query(992px) {
+                padding-left: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

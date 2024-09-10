@@ -1,0 +1,507 @@
+// Courses categories cards Styling
+.course__category__card_1 {
+    position: relative;
+    background-color: $white;
+    box-shadow: $shadow;
+    border-radius: 20px;
+    overflow: hidden;
+    .course__category__card_text {
+        padding: 24px;
+        padding-bottom: 0;
+        .course__category__card_title {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                width: 120px;
+                height: 2px;
+                background: $dark-gray;
+            }
+        }
+        .category__info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            li {
+                color: $dark-gray;
+                &:first-child {
+                    list-style: none;
+                }
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .image {
+        border-radius: 0 0 20px 20px;
+        -webkit-transition: all 0.6s linear 0s;
+        transition: all 0.6s linear 0s;
+    }
+    &:hover {
+        .image {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            -webkit-transition: all 0.6s linear 0s;
+            transition: all 0.6s linear 0s;
+        }
+    }
+}
+
+.course__category__card_2 {
+    position: relative;
+    box-shadow: $shadow;
+    border-radius: 15px;
+    overflow: hidden;
+    .image {
+        border-radius: 15px;
+    }
+    .course__category__card_text {
+        position: absolute;
+        bottom: -78px;
+        padding: 24px;
+        transition: $transition;
+        .course__category__card_title {
+            position: relative;
+            color: $white;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                width: 120px;
+                height: 2px;
+                background: $white;
+            }
+        }
+        .category_info_text {
+            color: $white;
+            margin-bottom: 64px;
+            transition: $transition;
+        }
+        .category__info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            li {
+                color: $white;
+                &:first-child {
+                    list-style: none;
+                }
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    &:hover {
+        .course__category__card_text {
+            bottom: 0;
+            transition: $transition;
+            .category_info_text {
+                margin-bottom: 40px;
+                transition: $transition;
+            }
+            .category__info {
+                transition: $transition;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.courses-1 {
+    background: url(../media/backgrounds/courses-1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+.courses-2 {
+    background: url(../media/backgrounds/courses-2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+// Course Card Style
+.course__card {
+    position: relative;
+    padding-top: 32px;
+    @include short-query(992px, 1400px) {
+        padding-top: 16px;
+    }
+    @include media-query(767px) {
+        padding-top: 16px;
+    }
+    .course__card__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: $transition;
+        @include short-query(992px, 1400px) {
+            width: 55px;
+        }
+        @include media-query(767px) {
+            width: 55px;
+        }
+    }
+    &:hover {
+        .course__card__icon {
+            transform: rotate(10deg);
+            transition: $transition;
+        }
+    }
+    .course__card__content {
+        margin: 0px 0 0 52px;
+        position: relative;
+        z-index: 5;
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: $shadow;
+        display: flex;
+        justify-content: space-between;
+        @include short-query(1199px, 1400px) {
+            margin-left: 26px;
+        }
+        @include short-query(992px, 1200px) {
+            flex-direction: column;
+            margin-left: 26px;
+            padding-left: 16px;
+        }
+        @include media-query(767px) {
+            flex-direction: column;
+            margin-left: 26px;
+            padding-right: 16px;
+        }
+        .left__block {
+            position: relative;
+            width: 100%;
+            padding: 20px 0 39px 82px;
+            @include short-query(992px, 1400px) {
+                padding-left: 40px;
+            }
+            @include short-query(992px, 1200px) {
+                padding-bottom: 0;
+            }
+            @include media-query(767px) {
+                padding-left: 40px;
+                padding-bottom: 0;
+            }
+            .course_tag {
+                position: absolute;
+                right: 8px;
+                top: 32px;
+                @include media-query(360px) {
+                    display: none;
+                }
+            }
+            .course_info {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                li {
+                    color: $dark-gray;
+                    margin-left: 12px;
+                    &:first-child {
+                        list-style: none;
+                        margin-left: 0;
+                    }
+                    i {
+                        color: $accent-1;
+                        margin-right: 8px;
+                    }
+                }
+            }
+            .author_card {
+                position: relative;
+                .author_img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 50%;
+                    border: 3px solid $accent-1;
+                    @include media-query(767px) {
+                        width: 50px;
+                    }
+                }
+                .author_text_block {
+                    margin-left: 22px;
+                    padding: 12px 24px 12px 64px;
+                    border-radius: 15px;
+                    max-width: 260px;
+                    box-shadow: $shadow;
+                    @include media-query(767px) {
+                        width: fit-content;
+                        padding: 8px 16px 8px 40px;
+                    }
+                }
+            }
+        }
+        .right__block {
+            text-align: center;
+            position: relative;
+            @include short-query(992px, 1200px) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            @include media-query(767px) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                height: 175px;
+                width: 1px;
+                background: $medium-gray;
+                transform: translate(-50%, -50%);
+                @include short-query(992px, 1200px) {
+                    display: none;
+                }
+                @include media-query(767px) {
+                    display: none;
+                }
+            }
+
+            .price_block {
+                position: relative;
+                width: 165px;
+                height: 165px;
+                @include short-query(1199px, 1400px) {
+                    width: 140px;
+                    height: 150px;
+                }
+                .price_vector {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 10;
+                }
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 20;
+                }
+            }
+        }
+        .bottom_vector {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 0 0 10px 0;
+        }
+    }
+}
+
+// Course Detail
+.course_detail {
+    .author_block_card {
+        display: flex;
+        align-items: center;
+        .author_img {
+            position: relative;
+            z-index: 20;
+            flex-shrink: 0;
+            img {
+                border: 3px solid $accent-1;
+                border-radius: 50%;
+                width: 74px;
+                height: 74px;
+            }
+        }
+        .author_detail {
+            position: relative;
+            z-index: 10;
+            background: $white;
+            width: 100%;
+            padding: 12px 24px 12px 64px;
+            margin-left: -50px;
+            box-shadow: $shadow;
+            border-radius: 15px;
+        }
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 19px 24px;
+        background: $white;
+        box-shadow: $shadow;
+        border-radius: 20px;
+        @include media-query(767px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+        .info_left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 54px;
+            @include media-query(1399px) {
+                gap: 48px;
+            }
+            @include media-query(1199px) {
+                gap: 24px;
+            }
+        }
+        .info_right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 64px;
+            padding-left: 64px;
+            margin-left: 64px;
+            border-left: 1px solid $medium-gray;
+            @include media-query(1399px) {
+                gap: 48px;
+                padding-left: 48px;
+                margin-left: 48px;
+            }
+            @include media-query(1199px) {
+                gap: 24px;
+                padding-left: 24px;
+                margin-left: 24px;
+            }
+            @include media-query(767px) {
+                padding-left: 0;
+                margin-left: 0;
+                border: none;
+                justify-content: flex-start;
+            }
+        }
+    }
+    .nav-tabs {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 32px;
+        border: none;
+        margin-bottom: 32px;
+        @include media-query(1199px) {
+            flex-direction: row;
+            gap: 24px;
+        }
+        .nav-item {
+            .nav-link {
+                background: transparent;
+                border: none;
+                outline: none;
+                padding: 0;
+                transition: $transition;
+                border-radius: 0;
+                &.active {
+                    border-left: 4px solid $accent-1;
+                    padding-left: 15px;
+                    color: $black;
+                    transition: $transition;
+                }
+                &:hover {
+                    color: $accent-1;
+                    // border-left: 4px solid $accent-1;
+                    // padding-left: 15px;
+                    // color: $black;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+    .tab-content {
+        .overview {
+            .points {
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    i {
+                        color: $white;
+                        background: $accent-1;
+                        padding: 4px;
+                        border-radius: 50%;
+                        box-shadow: $shadow;
+                    }
+                }
+            }
+        }
+        .curriculum {
+            .curriculum_detail {
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 16px 0;
+                    border-bottom: 1px solid $medium-gray;
+                    .title {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px 0;
+                    }
+                    &:last-child {
+                        border: none;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+        .reviews {
+            .review_block {
+                display: flex;
+                align-items: flex-start;
+                gap: 16px;
+                img {
+                    border-radius: 15px;
+                }
+                span {
+                    display: flex;
+                    gap: 4px;
+                    font-size: 20px;
+                    color: $accent-1;
+                }
+            }
+        }
+        .instructor {
+            .instructor_block {
+                display: flex;
+                gap: 11px;
+                align-items: center;
+                .instructor_img {
+                    flex-shrink: 0;
+                    img {
+                        border: 3px solid $accent-1;
+                        border-radius: 50%;
+                        width: 74px;
+                        height: 74px;
+                    }
+                }
+            }
+            .instructor_achievements {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    span,
+                    i{
+                        color: $accent-1;
+                    }
+                }
+            }
+        }
+    }
+}

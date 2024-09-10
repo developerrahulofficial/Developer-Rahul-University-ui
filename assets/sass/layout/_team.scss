@@ -1,0 +1,225 @@
+// Team Style
+.team {
+    position: relative;
+    .tag {
+        position: absolute;
+        top: 82px;
+        left: 175px;
+        -webkit-animation-name: float-bob-y;
+        animation-name: float-bob-y;
+        -webkit-animation-duration: 4s;
+        animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        @include media-query(1899px) {
+            left: 75px;
+        }
+        @include media-query(1699px) {
+            top: 50px;
+            left: 55px;
+        }
+        @include media-query(1399px) {
+            width: 70px;
+            height: 70px;
+        }
+        @include media-query(1199px) {
+            display: none;
+        }
+    }
+    .dots {
+        position: absolute;
+        bottom: 142px;
+        left: 222px;
+        -webkit-animation: leftRight-1 4.5s linear 0s infinite alternate;
+        animation: leftRight-1 4.5s linear 0s infinite alternate;
+        @include media-query(1199px) {
+            display: none;
+        }
+    }
+}
+.team-slider {
+    border-radius: 15px 0 0 15px;
+    background: rgba(10, 166, 215, 0.1);
+    background: url(../media/backgrounds/team-slider-bg.png) no-repeat;
+    background-size: cover;
+    background-position: 109px;
+    .team__card {
+        width: 330px;
+        height: 444px;
+    }
+}
+.team_one__content {
+    position: relative;
+    background: url(../media/shapes/paint-shape.png) no-repeat;
+    background-position: center right;
+    background-size: contain;
+    padding-left: 96px;
+    @include media-query-min(1400px) {
+        width: 470px;
+        margin-left: auto;
+        padding-left: 0;
+    }
+    @include media-query(992px) {
+        margin-left: auto;
+        padding-left: 12px;
+        background-position: center left;
+    }
+    @include short-query(768px, 991px) {
+        max-width: 960px;
+    }
+    @include short-query(576px, 767px) {
+        max-width: 720px;
+    }
+    @include media-query(575px) {
+        max-width: 540px;
+    }
+}
+
+.team__card {
+    box-shadow: $shadow;
+    border-radius: 15px;
+    @include media-query(575px) {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .team__img_block {
+        position: relative;
+        overflow: hidden;
+        .team_img {
+            border-radius: 15px;
+        }
+        .team__content_block {
+            margin: 16px;
+            position: absolute;
+            bottom: 0px;
+            overflow: hidden;
+            height: 91px;
+            transition: all 0.3s cubic-bezier(0.18, 0.55, 1, 1);
+            box-shadow: $shadow;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4.5px);
+            align-content: start;
+            justify-content: center;
+            text-align: center;
+            display: grid;
+            .team__text_block {
+                padding: 16px 8px;
+                overflow: hidden;
+                .team__info {
+                    display: flex;
+                    gap: 16px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    li {
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                        color: $dark-gray;
+                        i {
+                            color: $accent-1;
+                        }
+                    }
+                }
+                .team_info_text {
+                    padding-top: 8px;
+                }
+                .text_block_bg_shape {
+                    position: absolute;
+                    width: 100%;
+                    height: 0px;
+                    bottom: -100%;
+                    right: 0;
+                    border-radius: 0 0 10px 10px;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+        }
+    }
+    &:hover {
+        .team__img_block {
+            .team__content_block {
+                bottom: 0px;
+                height: 92%;
+                align-content: center;
+                transition: all 0.3s cubic-bezier(0.18, 0.55, 1, 1);
+
+                .team__text_block {
+                    align-content: center;
+                    .text_block_bg_shape {
+                        bottom: 0%;
+                        transition: all 0.4s ease-in-out;
+                    }
+                    .text_block_bg_shape {
+                        height: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Team Detail
+.team_detail {
+    .teacher_stats {
+        .stats_block {
+            padding: 16px 0;
+            border-bottom: 1px solid $medium-gray;
+            .skill_box {
+                background: $light-gray;
+                height: 8px;
+                width: 100%;
+                border-radius: 5px;
+                overflow: hidden;
+                .progress_bar {
+                    height: 100%;
+                    border-radius: 5px;
+                    background: radial-gradient(220.2% 70.12% at 30.24% 45.37%, #8ee3f9 0%, #d5aefc 100%);
+                }
+            }
+            .title{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 0;
+                i{
+                    color: $accent-1;
+                }
+            }
+        }
+    }
+}
+
+// Join Team 
+.join_team{
+    .block{
+        border-bottom: 1px solid $medium-gray;
+        &:last-child{
+            border: none;
+        }
+        .rules{
+            li{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                i{
+                    color: $white;
+                    background: $accent-1;
+                    padding: 4px;
+                    border-radius: 50%;
+                    box-shadow: $shadow;
+                }
+            }
+        }
+    }
+    .join_form_block{
+        margin-top: 32px;
+        background: $white;
+        border-radius: 15px;
+        box-shadow: $shadow;
+        padding: 24px;
+    }
+}

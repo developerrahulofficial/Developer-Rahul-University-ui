@@ -1,0 +1,132 @@
+/*---------------------------------------------"
+// Template Name: Educate
+// Template URL: https://techpedia.co.uk/template/Educate
+// Description: Educate Html 5 Template
+// Version: 1.0.0
+
+===============================================   
+STYLE SHEET INDEXING
+|
+|___ Fonts
+|___ Variables
+|___ Responsive
+|___ Reset Styles
+|___ Spacing
+|___ Helper Classes
+|___ Buttons
+|___ Headings
+|___ Layout Styles
+|___ END STYLE SHEET INDEXING
+
+--------------------------------------------*/
+
+/*-------------------------
+    Fonts
+-------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/*-------------------------
+    Variables
+-------------------------*/
+/* Fonts */
+$font-primary: "Inter", sans-serif;
+$font-sec: "Courgette", cursive;
+$font-awesome: "Font Awesome 5 Pro";
+
+/* Colors */
+$accent-1: #0aa6d7;
+$accent-2: #bfacf9;
+$accent-3: #ff8f51;
+$white: #fefcfb;
+$black: #2a322d;
+$medium-black: #1a1e1d;
+$dark-black: #141515;
+$lightest-gray: #f4f5f5;
+$light-gray: #c9cfce;
+$medium-gray: #b7bdbb;
+$dark-gray: #7a8582;
+
+/* Transitions */
+$transition: all 0.5s ease;
+$duration: 6.8s;
+
+
+/* Shadows */
+$shadow:
+  2px 1px 5px 0px rgba(2, 69, 122, 0.04),
+  9px 4px 10px 0px rgba(2, 69, 122, 0.03),
+  19px 10px 13px 0px rgba(2, 69, 122, 0.02),
+  35px 17px 15px 0px rgba(2, 69, 122, 0.01),
+  54px 27px 17px 0px rgba(2, 69, 122, 0);
+
+/*-------------------------
+  Basic Styles
+-------------------------*/
+@import "basic/basic";
+
+/*-------------------------
+  Helpers
+-------------------------*/
+@import "helpers/classes";
+
+@import "helpers/mixin";
+
+@import "helpers/spacing";
+
+/*-------------------------
+  Elements
+-------------------------*/
+@import "elements/preloader";
+
+@import "elements/buttons";
+
+@import "elements/form";
+
+@import "elements/countdown";
+
+@import "elements/search-popup";
+
+@import "elements/pagination";
+
+/*-------------------------
+  layouts
+-------------------------*/
+@import "layout/header";
+
+@import "layout/footer";
+
+@import "layout/hero-banner";
+
+@import "layout/features";
+
+@import "layout/common";
+
+@import "layout/about";
+
+@import "layout/blog";
+
+@import "layout/team";
+
+@import "layout/slider";
+
+@import "layout/sidebar";
+
+@import "layout/gallery";
+
+@import "layout/login";
+
+@import "layout/page-title";
+
+@import "layout/courses";
+
+@import "layout/testimonials";
+
+@import "layout/discount-banner";
+
+@import "layout/contact";
+
+@import "layout/faq";
+
+@import "layout/benefits";
+
+@import "layout/animations";

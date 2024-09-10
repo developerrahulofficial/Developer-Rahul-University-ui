@@ -1,0 +1,96 @@
+// Footer 
+footer {
+    .footer_main {
+        background: url(../media/backgrounds/footer-bg.png) no-repeat;
+        background-size: cover;
+        position: relative;
+        .vector_shape {
+            position: absolute;
+            top: 7px;
+            right: 266px;
+            z-index: 1;
+            @include media-query(1699px) {
+                right: 66px;
+            }
+            @include media-query(575px) {
+                display: none;
+            }
+        }
+        .dots {
+            position: absolute;
+            bottom: 18px;
+            left: 0px;
+            opacity: 0.8;
+            z-index: 1;
+            -webkit-animation: leftRight-1 4.5s linear 0s infinite alternate;
+            animation: leftRight-1 4.5s linear 0s infinite alternate;
+            @include media-query(991px) {
+                display: none;
+            }
+        }
+        .footer_widget {
+            position: relative;
+            z-index: 5;
+            margin-bottom: 32px;
+            .description_text {
+                max-width: 270px;
+                @include media-query(1199px) {
+                    max-width: 500px;
+                }
+            }
+            .list {
+                li {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 8px;
+                    margin-bottom: 12px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    i {
+                        color: $accent-1;
+                        margin-top: 4px;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        transition: $transition;
+                        i {
+                            color: $accent-1;
+                            margin-top: 0px;
+                        }
+                        &:hover {
+                            color: $accent-1;
+                            transition: $transition;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom-row {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            .newsletter_block {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .copyright_row {
+        padding: 16px 0;
+        background: $accent-1;
+        text-align: center;
+        P {
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+// Gallery 
+.g_c {
+    @include media-query(575px) {
+        max-width: 294px;
+        margin: 0 auto;
+    }
+    .gallery_card {
+        padding: 32px;
+        background: $white;
+        box-shadow: $shadow;
+        border-radius: 10px;
+        -webkit-transition: all 0.4s linear 0s;
+        transition: all 0.4s linear 0s;
+    }
+    &:nth-child(odd) {
+        .gallery_card {
+            transform: rotate(-2deg);
+        }
+    }
+    &:nth-child(even) {
+        .gallery_card {
+            transform: rotate(2deg);
+        }
+    }
+    &:hover {
+        .gallery_card {
+            transform: rotate(0);
+            -webkit-transition: all 0.4s linear 0s;
+            transition: all 0.4s linear 0s;
+        }
+    }
+}
+
+.gallery-2{
+
+    .img-block{
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 24px;
+        img {
+            width: 100%;
+            object-fit: cover;
+            -webkit-transition: all 0.6s linear 0s;
+            transition: all 0.6s linear 0s;
+        }
+        &:hover {
+            img {
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+                -webkit-transition: all 0.6s linear 0s;
+                transition: all 0.6s linear 0s;
+            }
+        }
+    }
+}

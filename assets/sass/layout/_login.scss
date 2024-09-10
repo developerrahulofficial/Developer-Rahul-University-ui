@@ -1,0 +1,110 @@
+// Login Register 
+.form_page {
+    background: url(../media/backgrounds/login.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include media-query(1199px) {
+        background: $white;
+    }
+    .form_block {
+        height: 100vh;
+        display: grid;
+        align-content: center;
+        position: relative;
+        @include media-query(575px) {
+            margin-top: 64px;
+        }
+        .text_block{
+            position: relative;
+            z-index: 25;
+            .title {
+                position: relative;
+                width: fit-content;
+                .speaker_icon {
+                    position: absolute;
+                    width: 73px;
+                    height: 73px;
+                    right: -75px;
+                    top: -30px;
+                }
+            }
+            .link-btn {
+                background: transparent;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 12px;
+                justify-content: center;
+                width: 100%;
+                padding: 8px 12px;
+                transition: $transition;
+                border-radius: 5px;
+                border: 1px solid $medium-gray;
+                &:hover {
+                    border-color: $accent-1;
+                    transition: $transition;
+                }
+            }
+            .or {
+                position: relative;
+                text-align: center;
+                &::after,
+                &::before {
+                    content: "";
+                    height: 1px;
+                    width: 46%;
+                    position: absolute;
+                    top: 14px;
+                    background: $light-gray;
+                    @include media-query(575px) {
+                        top: 12px;
+                    }
+                }
+                &::after {
+                    right: 0;
+                }
+                &::before {
+                    left: 0;
+                }
+            }
+            .bottom-row {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                gap: 36px;
+                @include media-query(575px) {
+                    justify-content: center;
+                }
+            }
+        }
+        .shapes{
+            img{
+                position: absolute;
+                &:nth-child(1){
+                    right: 50px;
+                    top: 98px;
+                    @include media-query(575px) {
+                        display: none;
+                    }
+                }
+                &:nth-child(2){
+                    top: 46%;
+                    left: -150px;
+                    @include media-query(1399px) {
+                        display: none;
+                    }
+                }
+                &:nth-child(3){
+                    bottom: -94px;
+                    right: 0;
+                }
+                &:nth-child(4){
+                    right: 70px;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}

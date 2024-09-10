@@ -1,0 +1,401 @@
+// Hero Banner 1
+.hero-banner-1 {
+    position: relative;
+    height: 855px;
+    background: url(../media/banners/hero-banner-1/hero-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include media-query(991px) {
+        height: 900px;
+    }
+    @include media-query(575px) {
+        background-position: bottom;
+        height: 850px;
+    }
+    .content {
+        position: relative;
+        .text_block {
+            padding-top: 192px;
+            @include media-query(991px) {
+                padding-top: 140px;
+            }
+            .tag {
+                -webkit-animation: animation-upDown-2 3s linear 0s infinite alternate;
+                animation: animation-upDown-2 3s linear 0s infinite alternate;
+                @include media-query(991px) {
+                    width: 50px;
+                }
+            }
+            .title {
+                span {
+                    position: relative;
+                    .rocket {
+                        position: absolute;
+                        right: -95px;
+                        top: -12px;
+                        @include media-query(991px) {
+                            width: 60px;
+                            right: -70px;
+                            top: 0px;
+                        }
+                    }
+                }
+            }
+            .btn_block {
+                position: relative;
+                .arrow {
+                    transform: rotate(-13.309deg);
+                    mix-blend-mode: overlay;
+                    position: absolute;
+                    bottom: -120px;
+                    left: -115px;
+                    @include media-query(575px) {
+                        display: none;
+                    }
+                }
+            }
+            .video-btn {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                @include media-query(991px) {
+                    width: 300px;
+                    margin-top: 64px;
+                }
+                @include media-query(767px) {
+                    width: 200px;
+                }
+                @include media-query(575px) {
+                    width: 120px;
+                    margin-top: 32px;
+                }
+                .text-vector {
+                    animation: rotating 8s infinite linear;
+                    @include media-query(575px) {
+                        width: 100px;
+                    }
+                }
+                .play-btn {
+                    position: absolute;
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 3200px;
+                    border: 3.2px solid rgba(10, 166, 215, 0.2);
+                    background: $white;
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    @include media-query(575px) {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    i {
+                        color: $accent-1;
+                        font-size: 20px;
+                        @include media-query(575px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-img {
+        position: absolute;
+        bottom: 0;
+        right: 13%;
+        z-index: 20;
+        @include short-query(1400px, 1799px) {
+            right: 7%;
+        }
+        @include short-query(992px, 1399px) {
+            right: 3%;
+        }
+        @include media-query(991px) {
+            width: 300px;
+        }
+        @include media-query(575px) {
+            right: 3%;
+            width: 250px;
+        }
+        @include media-query(400px) {
+            width: 200px;
+        }
+    }
+    .banner_feature_card {
+        position: absolute;
+        right: 25%;
+        z-index: 999;
+        bottom: 100px;
+        @include short-query(1400px, 1799px) {
+            right: 22%;
+        }
+        @include short-query(992px, 1399px) {
+            right: 19%;
+        }
+        @include media-query(991px) {
+            right: 25%;
+            bottom: 60px;
+        }
+        @include media-query(767px) {
+            right: 30%;
+        }
+        @include media-query(450px) {
+            display: none;
+        }
+        .card_block {
+            padding: 12px 24px;
+            padding-left: 44px;
+            box-shadow: $shadow;
+            border-radius: 15px;
+            background-color: $white;
+            position: relative;
+            .target_icon {
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .icons {
+        @include media-query(991px) {
+            display: none;
+        }
+        img {
+            position: absolute;
+            z-index: 30;
+            &:nth-child(1) {
+                top: 88px;
+                right: 615px;
+                @include short-query(1400px, 1799px) {
+                    right: 505px;
+                }
+                @include short-query(992px, 1399px) {
+                    right: 377px;
+                    top: 120px;
+                    width: 40px;
+                }
+            }
+            &:nth-child(2) {
+                top: 120px;
+                right: 778px;
+                @include short-query(1400px, 1799px) {
+                    right: 668px;
+                }
+                @include short-query(992px, 1399px) {
+                    right: 516px;
+                    top: 115px;
+                    width: 46px;
+                }
+            }
+            &:nth-child(3) {
+                top: 195px;
+                right: 534px;
+                @include short-query(1400px, 1799px) {
+                    right: 424px;
+                }
+                @include short-query(992px, 1399px) {
+                    right: 327px;
+                    top: 216px;
+                    width: 32px;
+                }
+            }
+            &:nth-child(4) {
+                top: 215px;
+                right: 671px;
+                @include short-query(1400px, 1799px) {
+                    right: 561px;
+                }
+                @include short-query(992px, 1399px) {
+                    right: 454px;
+                    top: 211px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+// Hero Banner 2 
+.hero-banner-2 {
+    position: relative;
+    background: url(../media/banners/hero-banner-2/banner-bg.png) no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    .text_block {
+        position: relative;
+        padding: 240px 0 286px;
+        z-index: 99;
+        @include media-query(1399px) {
+            padding: 240px 0 186px;
+        }
+        @include media-query(1199px) {
+            padding: 150px 0 0;
+        }
+        .hero_title{
+            
+            span{
+                position: relative;
+                z-index: 20;
+                .line_vector{
+                    position: absolute;
+                    left: 0px;
+                    bottom: -16px;
+                    z-index: -1;
+                    -webkit-animation: title-animation 5s linear 0s infinite;
+                            animation: title-animation 5s linear 0s infinite;
+                }
+            }
+        }
+        .btn-block{
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+    }
+    .features_row{
+        div{
+            &:nth-child(1){
+                .feature__card{
+                    margin-top: -110px;
+                    @include media-query(767px) {
+                        margin-top: -55px;
+                    }
+                    @include media-query(575px) {
+                        margin-top: 0;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+            &:nth-child(2){
+                .feature__card{
+                    margin-top: -55px;
+                    @include media-query(767px) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .img_block{
+        text-align: right;
+        @include media-query(1199px) {
+            position: relative;
+            margin-top: -80px;
+            margin-bottom: 50px;
+        }
+        @include media-query(991px) {
+            margin: 0 0 50px 0;
+        }
+        @include media-query(767px) {
+            
+        }
+        .banner_main_img {
+            position: absolute;
+            top: 82px;
+            right: 4%;
+            z-index: 10;
+            @include media-query(1799px) {
+                width: 720px;
+                height: 545px;
+                top: 120px;
+            }
+            @include media-query(1599px) {
+                width: 624px;
+                height: 472px;
+                top: 150px;
+            }
+            @include media-query(1199px) {
+                position: relative;
+                inset: auto;
+            }
+            @include media-query(991px) {
+                width: 520px;
+                height: 393px;
+            }
+            @include media-query(575px) {
+                width: auto;
+                height: auto;
+            }
+        }
+        .play-btn {
+            position: absolute;
+            z-index: 20;
+            top: 313px;
+            right: 334px;
+            width: 64px;
+            height: 64px;
+            border-radius: 3200px;
+            border: 3.2px solid rgba(10, 166, 215, 0.2);
+            background: $white;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            animation: shadows2 1s linear infinite;
+            -moz-animation: shadows2 1s linear infinite;
+            -webkit-animation: shadows2 1s linear infinite;
+            @include media-query(1799px) {
+                right: 14%;
+            }
+            @include media-query(1199px) {
+                top: 170px;
+            }
+            @include media-query(991px) {
+                top: 120px;
+            }
+            @include media-query(767px) {
+                top: 90px;
+                width: 48px;
+                height: 48px;
+            }
+            
+            i {
+                color: $accent-1;
+                font-size: 20px;
+                @include media-query(575px) {
+                    font-size: 16px;
+                }
+            }
+        }
+        .banner_feature_card {
+            position: absolute;
+            right: 35.5%;
+            z-index: 30;
+            top: 605px;
+            @include media-query(1799px) {
+                top: 500px;
+                right: 27%;
+            }
+            @include media-query(1199px) {
+                display: none;
+            }
+            .card_block {
+                padding: 12px 24px 12px 44px;
+                box-shadow: $shadow;
+                border-radius: 15px;
+                background-color: $white;
+                position: relative;
+                text-align: left;
+                @include media-query(1799px) {
+                    padding: 8px 12px 8px 32px;
+                }
+                .user_placeholder {
+                    border-radius: 50%;
+                    border: 5px solid $accent-1;
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    transform: translate(-70%, -50%);
+                    @include media-query(1799px) {
+                        width: 80px;
+                        height: 80px;
+                        transform: translate(-60%, -50%);
+                    }
+                }
+            }
+        }
+    }
+}
+

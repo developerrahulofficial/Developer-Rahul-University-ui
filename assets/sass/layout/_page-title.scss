@@ -1,0 +1,75 @@
+// Page Title Banner 
+.page_title_banner {
+    background: url(../media/banners/page-title-bg_2.png);
+    background-position: center;
+    height: 562px;
+    position: relative;
+    overflow: hidden;
+    @include media-query(992px) {
+        height: 450px;
+    }
+    @include media-query(767px) {
+        height: 400px;
+    }
+    @include media-query(575px) {
+        background: url(../media/banners/page-title-bg.png);
+        height: 350px;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 120px 0 46px;
+        @include media-query(767px) {
+            gap: 24px;
+            padding: 135px 0 46px;
+        }
+        @include media-query(575px) {
+            padding-top: 200px;
+        }
+        .title {
+            position: relative;
+            flex-shrink: 0;
+            @include media-query(575px) {
+                text-align: center;
+            }
+            .tag {
+                width: 58.087px;
+                height: 58.087px;
+                position: absolute;
+                top: -90px;
+                left: 190px;
+                -webkit-animation: animation-upDown-2 3s linear 0s infinite alternate;
+                animation: animation-upDown-2 3s linear 0s infinite alternate;
+                @include media-query(575px) {
+                    top: -80px;
+                    left: 160px;
+                }
+            }
+        }
+        .main_img {
+            @include media-query(992px) {
+                width: 367px;
+            }
+            @include media-query(575px) {
+                display: none;
+            }
+        }
+    }
+
+    .circle_vector {
+        position: absolute;
+        left: -72px;
+        bottom: -101px;
+        -webkit-animation: animation-popup-1 4s linear 0s infinite alternate;
+        animation: animation-popup-1 4s linear 0s infinite alternate;
+        @include media-query(1799px) {
+            width: 215px;
+        }
+        @include media-query(575px) {
+            left: auto;
+            right: -70px;
+            transform: rotate(90deg);
+        }
+    }
+}

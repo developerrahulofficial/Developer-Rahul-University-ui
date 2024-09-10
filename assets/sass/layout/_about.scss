@@ -1,0 +1,55 @@
+// About Area Start 
+.about__card{
+    position: relative;
+    padding-top: 11px;
+    .about__card__icon{
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 10;
+        background-color: $white;
+        border-radius: 50%;
+        border: 5px solid rgba(10, 166, 215, 0.20);
+        box-shadow: $shadow;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+    }
+    .about__card__content{
+        position: relative;
+        z-index: 5;
+        margin-left: 50px;
+        padding: 12px 24px 12px 64px;
+        background-color: $white;
+        box-shadow: $shadow;
+        border-radius: 15px;
+        p{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+.counter_item{
+    text-align: center;
+    .counter_item_info_block{
+        position: relative;
+        .counter_info{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 2px;
+            span{
+                color: $white;
+            }
+        }
+    }
+}
